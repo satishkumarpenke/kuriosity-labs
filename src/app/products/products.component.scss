@@ -1,0 +1,25 @@
+.main{
+    background-color: cornflowerblue;
+    width: 100%;
+}
+.block{
+    padding: 5px 10px;
+    width: calc( 20% - 1% );
+    text-align: center;
+    background-color: #fff;
+    margin: 5px 5px;
+    border-radius: 5px;
+    .image{
+        img{
+            width: 100%;
+            height: 200px;
+            background-size: auto;
+            background-position: center;
+            object-fit: contain;
+        }
+    }
+}
+.kkkmk{
+    background-image: url(/src/assets/categories/women/l-ul.webp);
+}
+.btn{}

@@ -1,0 +1,24 @@
+<div class="main">
+    <div class="container">
+        <div class=""> 
+            <div class="row card text-center mt-2" *ngFor="let product of Cart_products">
+                <table >
+                    <tr>
+                        <th>S.No</th>
+                        <th>Item Name</th>
+                        <th>Quantity</th>
+                        <th>price</th>
+                        
+                    </tr>
+                    <tr>
+                        <td>{{product.product.length}}</td>
+                        <td>{{product.product.name}}</td>
+                        <td>2</td>
+                        <td>{{product.product.price}}</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+

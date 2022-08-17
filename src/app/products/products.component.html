@@ -1,0 +1,21 @@
+<div class="main">
+    <div class="container">
+        <div class="row">
+            <div class="block" *ngFor="let product of products | search:searchkey">
+            <div class="image">
+                <img src="http://localhost:4200/{{product.img}}" alt="">
+            </div>
+            <div>
+                <h5>{{product.name}}</h5>
+            </div>
+            <div>
+                <p>Price:{{product.price}}</p>
+            </div>
+            <div>
+                <button class="btn btn-primary m-3" (click)="addToCart(product)">Add to Cart</button>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+

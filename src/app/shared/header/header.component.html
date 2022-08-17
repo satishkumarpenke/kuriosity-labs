@@ -1,0 +1,43 @@
+<div class="main">
+    <div class="container">
+        <div class="header">
+            <div class="row align-items-center">
+                <div class="col-md-9">
+                    <div class="row align-items-center">
+                        <div class="col-md-4 brand" routerLink="/" routerLinkActive="active">
+                            <i class="fa-solid fa-people-carry-box"></i>
+                            <p class="logoText">WE Service</p>
+                        </div>
+                        <div class="col-md-8 search">
+                            <div class="row">
+                                <input class="w-100" type="text" placeholder="Search here...">
+                                <i class="fa-solid fa-magnifying-glass"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="row cart-row">
+                        <div class="user">
+                            <i class="fa-solid fa-user"></i>
+                            
+                        </div>
+                        <div class="heart">
+                            <i class="fa-solid fa-heart"></i>
+                            <div class="badge bg-danger">
+                                0
+                            </div>
+                        </div>
+                        <div class="cart" routerLink="/cart" routerLinkActive="active">
+                            <i class="fa-solid fa-cart-arrow-down"></i>
+                            <div class="badge bg-danger">
+                                {{count}}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
