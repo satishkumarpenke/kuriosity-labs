@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ProductService } from '../services/product-service/product.service';
 
 @Component({
   selector: 'app-products',
@@ -6,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./products.component.scss']
 })
 export class ProductsComponent implements OnInit {
-  searchkey:string='';
+  public searchkey:any;
 
   products=[
     { id:'001',
@@ -78,9 +79,15 @@ export class ProductsComponent implements OnInit {
 
   public cart:any =[]
 
-  constructor() { }
+  constructor(private productService:ProductService) { }
 
   ngOnInit(): void {
+  }
+  ngDoCheck(){
+    this.productService.search$.subscribe((res)=>{
+      this.searchkey= res;
+      console.log('search text',res)
+    })
   }
   addToCart(product:any){
     alert(JSON.stringify(product))
@@ -90,6 +97,8 @@ export class ProductsComponent implements OnInit {
   this.cart.push(cartStorage)
   console.log(this.cart)
   localStorage.setItem('cart',JSON.stringify(this.cart))
+
   }
+
   
 }

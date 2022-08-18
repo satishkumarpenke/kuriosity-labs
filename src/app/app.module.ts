@@ -8,7 +8,9 @@ import { FooterComponent } from './shared/footer/footer.component';
 import { FrontPageComponent } from './front-page/front-page.component';
 import { ProductsComponent } from './products/products.component';
 import { CartComponent } from './cart/cart.component';
-import { SearchPipe } from './shared/header/pipes/search.pipe';
+import { SearchPipe } from './shared/pipes/search.pipe';
+import { FormsModule } from '@angular/forms';
+
 
 @NgModule({
   declarations: [
@@ -18,11 +20,12 @@ import { SearchPipe } from './shared/header/pipes/search.pipe';
     FrontPageComponent,
     ProductsComponent,
     CartComponent,
-    SearchPipe,
+    SearchPipe
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
